@@ -12,5 +12,13 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  let newTuts = []
+  newTuts = tutorials.map(() => {
+   for(let char of tutorials) {
+    char.split(' ').map((char) => char[0].toUpperCase() + char.slice(1)).join(' ')
+   }
+  })
+  return newTuts
 }
+
+titleCased()
